@@ -1,0 +1,20 @@
+Public Class Form1
+    Private Sub but_03_Click(sender As Object, e As EventArgs) Handles but_03.Click
+        Dim m0, m1, m2, m3
+        FileOpen(1, "C:\Users\user\test\1060303.SM", OpenMode.Input)
+        Input(1, m0)
+        FileClose(1)
+        m1 = m0
+        For i = 2 To m0
+            If m0 Mod i <> 0 Then
+                m2 += 1
+            End If
+        Next
+        If m2 = m1 - 1 Then
+            txt_03.Text = m1 & " is a prime number"
+        Else
+            txt_03.Text = m1 & " is not a prime number"
+        End If
+
+    End Sub
+End Class
