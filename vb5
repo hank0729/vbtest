@@ -1,0 +1,12 @@
+Public Class Form1
+    Private Sub btn_5_Click(sender As Object, e As EventArgs) Handles btn_5.Click
+        Dim m0(4, 2)
+        FileOpen(1, "C:\Users\user\test\1060305.SM", OpenMode.Input)
+        For i = 1 To 4
+            For j = 1 To 2
+                Input(1, m0(i, j))
+            Next
+        Next
+        txt_05.Text = "第五題結果 : " & vbCrLf & "[" & m0(1, 1) + m0(3, 1) & "     " & m0(1, 2) + m0(3, 2) & "]" & vbCrLf & "[" & m0(2, 1) + m0(4, 1) & "     " & m0(2, 2) + m0(4, 2) & "]"
+    End Sub
+End Class
